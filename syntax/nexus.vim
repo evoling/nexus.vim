@@ -1,5 +1,5 @@
 " Vim syntax file
-" Language:	Nexus file format with some reserved words for MrBayes
+" Language:	Nexus file format with reserved words for MrBayes
 " Maintainer:	Luis Carvalho <lexcarvalho@hotmail.com>
 " Last Change:	2004 Apr 17
 
@@ -26,6 +26,15 @@ syn keyword	nexusCommand	props report restore root
 syn keyword	nexusCommand	set showmatrix showmodel showtree
 syn keyword	nexusCommand	sump sumt taxastat taxset
 syn keyword	nexusCommand	unlink usertree
+" Further commands (added 2015-06-01)
+syn keyword	nexusCommand	constraint
+syn keyword	nexusCommand	about acknowledgments calibrate
+syn keyword	nexusCommand	citations disclaimer endblock
+syn keyword	nexusCommand	help manual propset
+syn keyword	nexusCommand	quit showbeagle showmcmctrees
+syn keyword	nexusCommand	showmoves showparams showusertrees
+syn keyword	nexusCommand	speciespartition ss ssp
+syn keyword	nexusCommand	startvals sumss version
 " Parameters
 syn keyword	nexusParameter	unordered ordered irreversible
 syn keyword	nexusParameter	tratio revmat omega statefreq
@@ -48,6 +57,40 @@ syn keyword	nexusParameter	symmetricbetapr topologypr brlenspr
 syn keyword	nexusParameter	speciationpr extinctionpr sampleprob thetapr
 syn keyword	nexusParameter	ratemult autoclose nowarnings
 syn keyword	nexusParameter	displaygeq contype showtreeprobs
+" Further parameters (added 2015-06-01)
+syn keyword     nexusParameter  nruns applyto ancstates filename
+syn keyword	nexusParameter	aamodel aarevmatpr about
+syn keyword	nexusParameter	acknowledgments allchains allcomps
+syn keyword	nexusParameter	allruns alpha askmore
+syn keyword	nexusParameter	autoreplace autotune burninfrac
+syn keyword	nexusParameter	burninss calctreeprobs calibrate
+syn keyword	nexusParameter	checkfreq checkpoint citations
+syn keyword	nexusParameter	clockratepr clockvarpr conformat
+syn keyword	nexusParameter	cppevents cppmultdev cppmultdevpr
+syn keyword	nexusParameter	cpprate cppratepr data
+syn keyword	nexusParameter	diagnfreq diagnstat discardfrac
+syn keyword	nexusParameter	disclaimer endblock extinctionrate
+syn keyword	nexusParameter	filename1 filename2 fossilizationpr
+syn keyword	nexusParameter	fromprior generatepr growthrate
+syn keyword	nexusParameter	help hpd igrvar
+syn keyword	nexusParameter	igrvarpr manual mcmcdiagn
+syn keyword	nexusParameter	minpartfreq minprob mixedvar
+syn keyword	nexusParameter	nodeagepr nsteps nswaps
+syn keyword	nexusParameter	ntrees ordertaxa outputname
+syn keyword	nexusParameter	ploidy popsize popsizepr
+syn keyword	nexusParameter	popvarpr possel precision
+syn keyword	nexusParameter	printall printmax propset
+syn keyword	nexusParameter	quit quitonerror ratemultiplier
+syn keyword	nexusParameter	relburnin revratepr samplestrat
+syn keyword	nexusParameter	savetrees scientific showbeagle
+syn keyword	nexusParameter	showmcmctrees showmoves showparams
+syn keyword	nexusParameter	showusertrees siteomega siterates
+syn keyword	nexusParameter	smoothing speciationrate speciespartition
+syn keyword	nexusParameter	ss ssp startparams
+syn keyword	nexusParameter	starttree startvals steptoplot
+syn keyword	nexusParameter	stoprule stopval sumss
+syn keyword	nexusParameter	swapseed tk02var tk02varpr
+syn keyword	nexusParameter	treeagepr tunefreq version
 " Options
 syn keyword	nexusOptionsR	4by4 doublet codon
 syn keyword	nexusOptionsR	universal vertmt mycoplasma
@@ -57,11 +100,20 @@ syn keyword	nexusOptionsR	noabsencesites nopresencesites
 syn keyword	nexusOptionsR	random user perfect consistentwith
 syn keyword	nexusOptionsR	scaled ratio dir
 syn keyword	nexusOptionsR	halfcompat allcompat
+" Aamodelpr options (added 2015-06-01)
+syn keyword     nexusOptionsR   poisson jones dayhoff mtrev mtmam wag rtrev cprev vt blosum lg equalin gtr
 syn keyword	nexusOptionsD	fixed variable beta dirichlet
 syn keyword	nexusOptionsD	uniform exponential constraints
 syn keyword	nexusOptionsD	unconstrained clock
 syn keyword	nexusOptionsD	dna rna protein restriction standard
 syn keyword	nexusOptionsD	continuous mixed
+" Further distributions (added 2015-06-01)
+syn keyword	nexusOptionsD	etbr exp exttbr
+syn keyword	nexusOptionsD	gammadir invgamdir lognormal
+syn keyword	nexusOptionsD	normal offsetexponential offsetgamma
+syn keyword	nexusOptionsD	offsetlognormal prob symdir
+syn keyword	nexusOptionsD	truncatednormal twoexp
+" Format options
 syn keyword	nexusOptionsB	ntax nchar datatype interleave
 syn keyword	nexusOptionsB	gap missing matchchar
 " Categorical
